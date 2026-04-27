@@ -150,7 +150,7 @@ function LoginForm() {
             type="text"
             inputMode="numeric"
             pattern="[0-9]*"
-            maxLength={6}
+            maxLength={8}
             placeholder="••••••"
             value={code}
             onChange={(e) => setCode(e.target.value.replace(/\D/g, ""))}
@@ -159,7 +159,7 @@ function LoginForm() {
           />
           {err && <p className="text-sm text-red-600">{err}</p>}
           <button
-            disabled={loading || code.length !== 6}
+            disabled={loading || code.length < 6}
             className="btn-primary w-full justify-center"
           >
             {loading ? "Vérification..." : "Se connecter"}
