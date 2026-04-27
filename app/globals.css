@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg: #fbf8f4;
+  --fg: #2a1f24;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+h1, h2, h3, .serif {
+  font-family: "Playfair Display", serif;
+  letter-spacing: -0.01em;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center px-5 py-2.5 rounded-full font-medium transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+.btn-primary {
+  @apply btn bg-rosepastel-500 text-white hover:bg-rosepastel-600 shadow-sm hover:shadow-md;
+}
+.btn-outline {
+  @apply btn border border-rosepastel-300 text-rosepastel-700 hover:bg-rosepastel-50;
+}
+.btn-dark {
+  @apply btn bg-neutral-900 text-white hover:bg-neutral-800;
+}
+
+.input {
+  @apply w-full rounded-xl border border-neutral-200 bg-white px-4 py-2.5 text-sm focus:border-rosepastel-400 focus:outline-none focus:ring-2 focus:ring-rosepastel-200;
+}
+
+.card {
+  @apply bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #eeb1bd; border-radius: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
