@@ -2,8 +2,8 @@ export type Product = {
   id: string;
   name: string;
   slug: string;
-  description: string | null;
-  ingredients: string | null;
+  description?: string | null;
+  ingredients?: string | null;
   price: number;
   image_url: string | null;
   images: string[] | null;
